@@ -3,6 +3,15 @@ export USE_CRYPTO_SUBMODULE=1
 DESTDIR=/usr/local
 PREFIX=mbedtls_
 
+
+CC=arm-none-eabi-gcc
+CXX=arm-none-eabi-g++
+LD=arm-none-eabi-ld
+AR=arm-none-eabi-ar
+
+CFLAGS=-ffunction-sections -fdata-sections
+CXX_FLAGS=-ffunction-sections -fdata-sections
+
 .SILENT:
 
 .PHONY: all no_test programs lib tests install uninstall clean test check covtest lcov apidoc apidoc_clean
